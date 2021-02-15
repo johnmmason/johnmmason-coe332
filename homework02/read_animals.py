@@ -3,6 +3,10 @@ import json
 import random
 import sys
 
+def error_exit(error_text):
+    print("[ERROR] read_animals.py: " + error_text)
+    sys.exit(1)
+
 def get_num_animals(arg, max_animals):
     num_animals = int(arg)
     
@@ -16,7 +20,14 @@ if __name__ == '__main__':
     with open('animals.json', 'r') as infile:
         barn = json.load(infile)
 
-    num_animals = get_num_animals(sys.argv[1], len(barn['animals']))
+    try:
+        num_animals = get_num_animals(sys.argv[1], len(barn['animals']))
+    except IndexError:
+        error_exit("read_animals.py requires a positional paramater \'num_animals\'.")
+    except AssertionError:
+        error_exit("\'num_animals\' must be within the range 1 and " + str(len(barn['animals'])) + ", inclusive.")
+    except ValueError:
+        error_exit("\'num_animals\' must be an integer")
 
     selected_animals = []
     for n in range(num_animals):
