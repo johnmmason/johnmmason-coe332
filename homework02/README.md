@@ -56,7 +56,7 @@ docker build -t {username}/json_parser:1.0 .
 To launch a container, run:
 
 ```
-docker run --rm -it -v $PWD:/data {username}/json_parser:1.0 /bin/bash
+docker run --rm -it -v $PWD:/host {username}/json_parser:1.0 /bin/bash
 ```
 
 Then, navigate to the mounted directory `/host`:
