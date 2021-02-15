@@ -31,6 +31,8 @@ if __name__ == '__main__':
 
     selected_animals = []
     for n in range(num_animals):
-        selected_animals.append( random.choice(barn['animals']) )
+        this_choice = random.choice(barn['animals'])
+        selected_animals.append( this_choice )
+        barn['animals'].remove(this_choice)
 
     print( json.dumps(selected_animals, indent=4) )
