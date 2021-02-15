@@ -1,29 +1,70 @@
-# homework02
+# homework02 - The Containers and Repositories of Dr. Moreau
 
-#### Run through Docker
+This folder builds on the Python scripts created in `johnmmason-coe332/homework01`
 
-This project and its dependencies are eligible to be run through a Docker container.
+## Project Overview
 
-First, navigate to the `homework02` directory on your machine and run
+#### This folder contains:
+* `generate_animals.py`, which generates `animals.json`
+* `animals.json`, the output of `generate_animals.py`, which contains 20 bizarre animals
+* `read_animals.py`, which reads `animals.json` and prints a specificed number of animals to the screen
+
+## Running this Project
+
+Get started by cloning this repository and navigating to the `homework02` folder:
+
+```
+git clone https://github.com/johnmmason/johnmmason-coe332.git
+cd johnmmason-coe332/homework02
+```
+
+### Run Locally
+
+First, ensure you have the required Python libraries to run this project:
+
+```
+pip3 install --user -r requirements.txt
+```
+
+Now, you can run the scripts as follows:
+
+generate_animals.py:
+```
+./generate_animals.py
+./read_animals.py {num_animals}
+```
+
+### Run through Docker
+
+First, navigate to the `homework02` directory on your machine and run:
 
 ```
 docker build -t {username}/json_parser:1.0 .
 ```
 
-To launch a container, run
+To launch a container, run:
 
 ```
-docker run --rm -it -v $PWD:/data {username}/json-parser:1.0 /bin/bash
+docker run --rm -it -v $PWD:/data {username}/json_parser:1.0 /bin/bash
 ```
 
-All modules are available in `/code` and can be run with
+Then, navigate to the mounted directory `/host`:
 
 ```
-python3 {path/to/program}
+cd /host
 ```
 
-Also, your project root directory has been mounted in the container's `/data` directory.  You can use this mount point to move the generated `animals.json` to your local machine.
+Now, run the scripts:
 
 ```
-cp /code/animals.json /data/
+./generate_animals.py
+./read_animals.py {num_animals}
+```
+*Copies of the code will also be available in `/code` in case you would prefer not to mount your host's PWD, or choose to mount a PWD other than `johnmmason-coe332/homework02`.*
+
+## Unit Testing
+
+Tests for the function `get_num_animals` within `read_animals.py` are available in the file `test_read_animals.py`.  You can run these tests using:
+```
+./test_read_animals.py
 ```
