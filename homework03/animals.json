@@ -1,0 +1,144 @@
+{
+    "animals": [
+        {
+            "head": "bull",
+            "body": "pup-racer",
+            "arms": 9,
+            "legs": 3,
+            "tails": 12
+        },
+        {
+            "head": "lion",
+            "body": "toucan-fowl",
+            "arms": 5,
+            "legs": 9,
+            "tails": 14
+        },
+        {
+            "head": "raven",
+            "body": "gull-crane",
+            "arms": 7,
+            "legs": 6,
+            "tails": 13
+        },
+        {
+            "head": "raven",
+            "body": "fly-badger",
+            "arms": 9,
+            "legs": 9,
+            "tails": 18
+        },
+        {
+            "head": "raven",
+            "body": "lizard-moose",
+            "arms": 2,
+            "legs": 12,
+            "tails": 14
+        },
+        {
+            "head": "snake",
+            "body": "robin-goose",
+            "arms": 5,
+            "legs": 6,
+            "tails": 11
+        },
+        {
+            "head": "bull",
+            "body": "grouse-ape",
+            "arms": 2,
+            "legs": 12,
+            "tails": 14
+        },
+        {
+            "head": "bull",
+            "body": "bream-toucan",
+            "arms": 4,
+            "legs": 9,
+            "tails": 13
+        },
+        {
+            "head": "bull",
+            "body": "tarpon-tick",
+            "arms": 7,
+            "legs": 3,
+            "tails": 10
+        },
+        {
+            "head": "lion",
+            "body": "aphid-hippo",
+            "arms": 6,
+            "legs": 3,
+            "tails": 9
+        },
+        {
+            "head": "bull",
+            "body": "snail-tapir",
+            "arms": 8,
+            "legs": 3,
+            "tails": 11
+        },
+        {
+            "head": "bunny",
+            "body": "shiner-tuna",
+            "arms": 10,
+            "legs": 9,
+            "tails": 19
+        },
+        {
+            "head": "raven",
+            "body": "newt-camel",
+            "arms": 2,
+            "legs": 12,
+            "tails": 14
+        },
+        {
+            "head": "lion",
+            "body": "civet-bream",
+            "arms": 9,
+            "legs": 12,
+            "tails": 21
+        },
+        {
+            "head": "bunny",
+            "body": "heron-rat",
+            "arms": 7,
+            "legs": 9,
+            "tails": 16
+        },
+        {
+            "head": "raven",
+            "body": "newt-beagle",
+            "arms": 4,
+            "legs": 6,
+            "tails": 10
+        },
+        {
+            "head": "snake",
+            "body": "weevil-toucan",
+            "arms": 10,
+            "legs": 3,
+            "tails": 13
+        },
+        {
+            "head": "bunny",
+            "body": "vervet-baboon",
+            "arms": 3,
+            "legs": 6,
+            "tails": 9
+        },
+        {
+            "head": "bunny",
+            "body": "falcon-tuna",
+            "arms": 4,
+            "legs": 9,
+            "tails": 13
+        },
+        {
+            "head": "raven",
+            "body": "newt-heron",
+            "arms": 10,
+            "legs": 6,
+            "tails": 16
+        }
+    ]
+}

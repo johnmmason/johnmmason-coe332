@@ -1,0 +1,32 @@
+{
+    "animals": [
+        {
+            "head": "bunny",
+            "body": "shad-wren",
+            "arms": 10,
+            "legs": 12,
+            "tails": 22
+        },
+        {
+            "head": "lion",
+            "body": "aphid-dove",
+            "arms": 7,
+            "legs": 3,
+            "tails": 10
+        },
+        {
+            "head": "lion",
+            "body": "hog-buck",
+            "arms": 6,
+            "legs": 12,
+            "tails": 18
+        },
+        {
+            "head": "raven",
+            "body": "kiwi-goose",
+            "arms": 10,
+            "legs": 3,
+            "tails": 13
+        }
+    ]
+}
