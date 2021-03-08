@@ -2,7 +2,7 @@
 
 import json
 import random
-from . import generate_animals
+import generate_animals
 from flask import Flask, request, abort
 
 app = Flask(__name__)
