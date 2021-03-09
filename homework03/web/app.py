@@ -7,7 +7,7 @@ from flask import Flask, request, abort
 
 app = Flask(__name__)
 
-@app.route('/generate', methods = ['GET'])
+@app.route('/generate_animals', methods = ['GET'])
 def gen_animals():
     # parse URL arguments, or if none specify 1 animal
     num_animals = request.args.get('num_animals')
@@ -34,7 +34,7 @@ def gen_animals():
     # return specified num of animals
     return json.dumps(barn, indent=4)
 
-@app.route('/get', methods = ['GET'])
+@app.route('/animals', methods = ['GET'])
 def get_animals():
     # read from file
     try:
@@ -72,7 +72,7 @@ def get_animals():
 
     return json.dumps(selected_animals, indent=4)
 
-@app.route('/pop', methods = ['GET'])
+@app.route('/pop_animals', methods = ['GET'])
 def pop_animals():
     # open file and read animals
     try:

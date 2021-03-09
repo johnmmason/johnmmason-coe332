@@ -27,7 +27,7 @@ docker-compose down
 
 This project consists of 3 routes which perform unique operations on the animals database.
 
-### /generate
+### /generate_animals
 
 Generate a set of random animals and populate the database. This route takes a query parameter `num_animals` which specifies the number of animals to be generated. If `num_animals` is not given, `num_animals = 1`.
 
@@ -35,7 +35,7 @@ Generate a set of random animals and populate the database. This route takes a q
 curl localhost:5018/generate?num_animals=20
 ```
 
-### /get
+### /animals
 
 Get a specified number of animals from the database.  This route takes a query parameter `num_animals` which specifies the number of animals to be retrieved. If `num_animals` is not given, all animals are printed.
 
@@ -43,7 +43,7 @@ Get a specified number of animals from the database.  This route takes a query p
 curl localhost:5018/get # OR
 curl localhost:5018/get?num_animals=5
 ```
-### /pop
+### /pop_animals
 
 Get a specified number of animals from the database, and remove them from the database.  This route takes a query parameter `num_animals` which specifies the number of animals to be retrieved. If `num_animals` is not given, `num_animals = 1`.
 
