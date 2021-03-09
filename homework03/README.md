@@ -32,22 +32,23 @@ This project consists of 3 routes which perform unique operations on the animals
 Generate a set of random animals and populate the database. This route takes a query parameter `num_animals` which specifies the number of animals to be generated. If `num_animals` is not given, `num_animals = 1`.
 
 ```bash
-curl localhost:5018/generate?num_animals=20
+curl localhost:5018/generate_animals?num_animals=20
 ```
 
 ### /animals
 
-Get a specified number of animals from the database.  This route takes a query parameter `num_animals` which specifies the number of animals to be retrieved. If `num_animals` is not given, all animals are printed.
+Get a specified number of animals from the database.  This route takes a query parameter `num_animals` which specifies the number of animals to be retrieved. If `num_animals` is not given, all animals are printed.  You can also specify an additional query parameter `head_type` which limits the output to animals with a specified head type.  If `head_type` is not given, all animals are printed.  Note: If you specify `head_type`, `num_animals` must not be greater than the number of animals with the given head type.
 
 ```bash
-curl localhost:5018/get # OR
-curl localhost:5018/get?num_animals=5
+curl localhost:5018/animals # OR
+curl localhost:5018/animals?num_animals=5 # OR
+curl "localhost:5018/animals?num_animals=2&head_type=snake"
 ```
 ### /pop_animals
 
 Get a specified number of animals from the database, and remove them from the database.  This route takes a query parameter `num_animals` which specifies the number of animals to be retrieved. If `num_animals` is not given, `num_animals = 1`.
 
 ```bash
-curl localhost:5018/pop # OR
-curl localhost:5018/pop?num_animals=5
+curl localhost:5018/pop_animals # OR
+curl localhost:5018/pop_animals?num_animals=5
 ```

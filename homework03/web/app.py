@@ -48,6 +48,10 @@ def get_animals():
 
     # parse URL arguments
     num_animals = request.args.get('num_animals')
+    head_param = request.args.get('head_type')
+    
+    if head_param is not None:
+        barn['animals'] = [animal for animal in barn['animals'] if animal['head'] == head_param]
 
     if num_animals is None:
         num_animals = len(barn['animals'])
@@ -60,9 +64,7 @@ def get_animals():
         abort(400, "\'num_animals\' must be within the range 1 and " + str(len(barn['animals'])) + ", inclusive.")
     except ValueError:
         abort(400, "\'num_animals\' must be of type int.")
-    except:
-        abort(400)
-
+    
     # get requested number of animals frim the list
     selected_animals = []
     for n in range(num_animals):
