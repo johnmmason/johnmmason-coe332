@@ -32,7 +32,7 @@ This project consists of 3 routes which perform unique operations on the animals
 Generate a set of random animals and populate the database. This route takes a query parameter `num_animals` which specifies the number of animals to be generated. If `num_animals` is not given, `num_animals = 1`.
 
 ```bash
-curl localhost:5018/generate?num_animals=20
+curl localhost:5018/generate_animals?num_animals=20
 ```
 
 ### /animals
@@ -40,14 +40,14 @@ curl localhost:5018/generate?num_animals=20
 Get a specified number of animals from the database.  This route takes a query parameter `num_animals` which specifies the number of animals to be retrieved. If `num_animals` is not given, all animals are printed.
 
 ```bash
-curl localhost:5018/get # OR
-curl localhost:5018/get?num_animals=5
+curl localhost:5018/animals # OR
+curl localhost:5018/animals?num_animals=5
 ```
 ### /pop_animals
 
 Get a specified number of animals from the database, and remove them from the database.  This route takes a query parameter `num_animals` which specifies the number of animals to be retrieved. If `num_animals` is not given, `num_animals = 1`.
 
 ```bash
-curl localhost:5018/pop # OR
-curl localhost:5018/pop?num_animals=5
+curl localhost:5018/pop_animals # OR
+curl localhost:5018/pop_animals?num_animals=5
 ```
