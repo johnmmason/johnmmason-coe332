@@ -41,8 +41,12 @@ Get a specified number of animals from the database.  This route takes a query p
 
 ```bash
 curl localhost:5018/animals # OR
+<<<<<<< HEAD
 curl localhost:5018/animals?num_animals=5 # OR
 curl "localhost:5018/animals?num_animals=2&head_type=snake"
+=======
+curl localhost:5018/animals?num_animals=5
+>>>>>>> 7ae8358317c6f05e0cf958bd45e6ea4762890853
 ```
 ### /pop_animals
 
