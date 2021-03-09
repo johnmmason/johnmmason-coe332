@@ -2,6 +2,7 @@ version: "3"
 services:
   web:
     build: web
+    container_name: jmmason_hw3_web
     ports:
       - "5018:5018"
    
