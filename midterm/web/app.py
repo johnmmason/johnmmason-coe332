@@ -27,7 +27,7 @@ def clear():
     except:
         abort(500)
 
-    return "Success!"
+    return "Success!\n"
 
 @app.route('/get_animals_by_dates')
 def query_dates():
@@ -100,14 +100,14 @@ def delete_by_dates():
 @app.route('/get_average_legs', methods=['GET'])
 def get_average_legs():
     try:
-        return str( db.get_average_num_legs() )
+        return str( db.get_average_num_legs() ) + '\n'
     except:
         abort(500)
 
 @app.route('/count_animals', methods=['GET'])
 def count_animals():
     try:
-        return str( db.count_animals() )
+        return str( db.count_animals() ) + '\n'
     except:
         abort(500)
 
