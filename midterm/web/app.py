@@ -18,7 +18,7 @@ def init():
     
     db.add_animals(num_animals)
 
-    return "Success!"
+    return "Success!\n"
 
 @app.route('/clear', methods = ['GET'])
 def clear():
