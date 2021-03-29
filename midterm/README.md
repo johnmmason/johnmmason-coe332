@@ -29,29 +29,29 @@ docker-compose down
 Generate a set of random animals to populate the database.  This route takes a query parameter `num_animals` which defaults to `num_animals = 100` if not provided.
 
 ```bash
-curl localhost:5018/init # OR
-curl localhost:5018/init?num_animals=5
+curl "localhost:5018/init" # OR
+curl "localhost:5018/init?num_animals=5"
 ```
 
 ### /clear
 Remove all animals from the database.
 
 ```bash
-curl localhost:5018/clear
+curl "localhost:5018/clear"
 ```
 
 ### /get_animals_by_dates
 Get all animals created between query parameters `start_date` and `end_date`.  Dates in format `2021-03-30` have been tested, although other formats should also be recognized.
 
 ```bash
-curl localhost:5018/get_animals_by_dates?start_date='2021-03-28'&end_date='2021-07-04'
+curl "localhost:5018/get_animals_by_dates?start_date='2021-03-28'&end_date='2021-07-04'"
 ```
 
 ### /get_animal_by_uuid
 Get the animal with the UUID matching query parameter `uuid`.
 
 ```bash
-curl localhost:5018/get_animal_by_uuid?uuid=6e60b258-f8fb-43db-a64e-983f157feadb
+curl "localhost:5018/get_animal_by_uuid?uuid=6e60b258-f8fb-43db-a64e-983f157feadb"
 ```
 
 ### /edit_animal_by_uuid
@@ -69,19 +69,19 @@ curl --header "Content-Type: application/json" \
 Delete all animals created by query parameters `start_date` and `end_date`.  Dates in format `2021-03-30` have been tested, although other formats should be recognized.
 
 ```bash
-curl localhost:5018/delete_animals_by_dates?start_date='2021-03-28'&end_date='2021-07-04'
+curl "localhost:5018/delete_animals_by_dates?start_date='2021-03-28'&end_date='2021-07-04'"
 ```
 
 ### /get_average_legs
 Get the floating point average number of legs for all animals in the database.
 
 ```bash
-curl localhost:5018/get_average_legs
+curl "localhost:5018/get_average_legs"
 ```
 
 ### /count_animals
 Get the integer number of animals in the database.
 
 ```bash
-curl localhost:5018/count_animals
+curl "localhost:5018/count_animals"
 ```
