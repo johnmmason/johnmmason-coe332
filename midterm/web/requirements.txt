@@ -1,0 +1,5 @@
+Flask==1.1.2
+petname==2.6
+redis==3.5.3
+python-dateutil==2.8.1
+

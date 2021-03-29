@@ -1,6 +1,7 @@
 version: '3'
 
 services:
+
   redis:
     container_name: jmm-redis
     image: redis:latest
@@ -9,3 +10,8 @@ services:
     volumes:
       - ./config/redis.conf:/redis.conf
     command: [ "redis-server", "/redis.conf" ]
+
+  web:
+    build: web
+    ports:
+      - "5018:5000"
