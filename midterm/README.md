@@ -16,6 +16,11 @@ Launch the container using `docker-compose`:
 ```bash
 docker-compose up -d
 ```
+**The first time you launch the container, the database will be empty.  To populate the database, run:**
+
+```bash
+curl "localhost:5018/init?num_animals=5"
+```
 
 When you're done, stop the container and clean up:
 
@@ -48,14 +53,14 @@ curl "localhost:5018/get_animals_by_dates?start_date='2021-03-28'&end_date='2021
 ```
 
 ### /get_animal_by_uuid
-Get the animal with the UUID matching query parameter `uuid`.
+Get the animal with the UUID matching query parameter `uuid`.  Since UUIDs are generated randomly, you will need to replace the example UUID with one from your database.
 
 ```bash
 curl "localhost:5018/get_animal_by_uuid?uuid=6e60b258-f8fb-43db-a64e-983f157feadb"
 ```
 
 ### /edit_animal_by_uuid
-Update the animal with UUID matching query parameter `uuid`.
+Update the animal with UUID matching query parameter `uuid`.  Since UUIDs are generated randomly, you will need to replace the example UUID with one from your database.
 **This route uses a POST request instead of a GET request.**
 
 ```bash
