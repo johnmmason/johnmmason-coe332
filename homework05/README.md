@@ -1,6 +1,6 @@
 # homework05
 
-Click [here](https://coe-332-sp21.readthedocs.io/en/main/homework/homework05.html) to go to the prompt for Homework 4.
+Click [here](https://coe-332-sp21.readthedocs.io/en/main/homework/homework05.html) to go to the prompt for Homework 5.
 
 ### Part A
 
