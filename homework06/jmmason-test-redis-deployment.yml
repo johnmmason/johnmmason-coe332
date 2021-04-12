@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmmason-test-redis-deployment
+  labels:
+    app: jmmason-test-redis
+    username: jmmason
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jmmason-test-redis
+  template:
+    metadata:
+      labels:
+        app: jmmason-test-redis
+        username: jmmason
+        env: test
+    spec:
+      containers:
+        - name: jmmason-test-redis
+          image: redis:5.0.0
+          volumeMounts:
+          - name: jmmason-test-redis-pvc
+            mountPath: "/data"
+          ports:
+            - name: redis
+              containerPort: 6379
+      volumes:
+      - name: jmmason-test-redis-pvc
+        persistentVolumeClaim:
+          claimName: jmmason-test-redis-pvc

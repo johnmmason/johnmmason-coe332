@@ -1,0 +1,27 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmmason-test-flask-deployment
+  labels:
+    app: jmmason-test-flask
+    username: jmmason
+    env: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jmmason-test-flask
+  template:
+    metadata:
+      labels:
+        app: jmmason-test-flask
+        username: jmmason
+        env: test
+    spec:
+      containers:
+        - name: jmmason-test-flask
+          image: johnmmason/coe-332-animals:1.0
+          ports:
+            - name: flask
+              containerPort: 5018
