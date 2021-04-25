@@ -1,5 +1,7 @@
 # homework07
 
+Click [here](https://coe-332-sp21.readthedocs.io/en/main/homework/homework07.html) to go to the prompt for homework 6.
+
 First, deploy the containers:
 
 ```bash
