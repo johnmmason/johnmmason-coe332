@@ -1,6 +1,6 @@
 # homework07
 
-Click [here](https://coe-332-sp21.readthedocs.io/en/main/homework/homework07.html) to go to the prompt for homework 6.
+Click [here](https://coe-332-sp21.readthedocs.io/en/main/homework/homework07.html) to go to the prompt for homework 7.
 
 First, deploy the containers:
 
