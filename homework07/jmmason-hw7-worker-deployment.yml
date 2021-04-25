@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmmason-hw7-worker-deployment
+  labels:
+    app: jmmason-hw7-worker
+    username: jmmason
+    env: test
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jmmason-hw7-worker
+  template:
+    metadata:
+      labels:
+        app: jmmason-hw7-worker
+        username: jmmason
+        env: test
+    spec:
+      containers:
+        - name: jmmason-hw7-worker
+          imagePullPolicy: Always
+          image: johnmmason/coe-332-worker:1.0
+          env:
+            - name: "WORKER_IP"
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP

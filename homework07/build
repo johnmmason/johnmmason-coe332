@@ -1,0 +1,6 @@
+#!/bin/bash
+docker build --tag=johnmmason/coe-332-api:1.0 -f Dockerfile.api .
+docker build --tag=johnmmason/coe-332-worker:1.0 -f Dockerfile.worker .
+
+docker push johnmmason/coe-332-api:1.0
+docker push johnmmason/coe-332-worker:1.0

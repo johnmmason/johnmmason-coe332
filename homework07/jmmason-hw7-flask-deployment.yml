@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jmmason-hw7-flask-deployment
+  labels:
+    app: jmmason-hw7-flask
+    username: jmmason
+    env: test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jmmason-hw7-flask
+  template:
+    metadata:
+      labels:
+        app: jmmason-hw7-flask
+        username: jmmason
+        env: test
+    spec:
+      containers:
+        - name: jmmason-hw7-flask
+          imagePullPolicy: Always
+          image: johnmmason/coe-332-api:1.0
+          ports:
+            - name: flask
+              containerPort: 5000
